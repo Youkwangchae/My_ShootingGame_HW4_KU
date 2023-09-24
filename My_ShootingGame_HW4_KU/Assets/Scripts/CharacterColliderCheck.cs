@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class CharacterColliderCheck : MonoBehaviour
 {
+    public UnityEvent onWin;
+    public UnityEvent onLose;
+
     private void OnCollisionEnter(Collision collision)
     {
         var other = collision.collider;
@@ -12,11 +15,11 @@ public class CharacterColliderCheck : MonoBehaviour
         {
             if (other.name.Contains("Win"))
             {
-                SceneManager.LoadScene("WinScene");
+                onWin.Invoke();
             }
             else
             {
-                SceneManager.LoadScene("LoseScene");
+                onLose.Invoke();
             }
         }
     }
