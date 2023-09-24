@@ -4,9 +4,10 @@
  2023-2학기 건국대학교 게임프로그래밍(3175) 과제 4번 슈팅게임 제출물입니다.
 
 *New Features
-- 마우스 우클릭 시, 무기가 변경되고 화면에 현재 발사되는 무기 이름 명시.
-- 좌우 방향 움직임 시, 사용자의 transform.rotation 값이 그 방향대로 바뀌어 자연스럽게 회전하도록 함.
-- WASD, 키보드 방향키 모두 사용하여 움직일 수 있도록 함. (좌/우 : W, ← / D, →) (위/아래 W, ↑ / S, ↓)
+- 게임 환경에서 앞뒤좌우 총 4방향에 벽을 설치, Static Collider로 설정.
+- HW3 프로젝트의 기존 건물에도 Box Collider를 통해 Static Collider로 설정.
+- 충돌 체크, 관련 설명을 위한 큐브, 구 오브젝트를 설치
+- GameManager의 instance, UnityEvent 사용 및 Win, Lose 조건 판단 기능 추가.
 
 *필수 사항
 - 메인 캐릭터의 움직임에 AddRelativeForce, AddRelativeTorque를 통해 물리 기반의 움직임을 구현했습니다.
